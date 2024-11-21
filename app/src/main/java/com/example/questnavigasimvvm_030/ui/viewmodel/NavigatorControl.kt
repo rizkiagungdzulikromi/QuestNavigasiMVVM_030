@@ -46,6 +46,12 @@ fun NavigatorControl(
             )
         }
 
-
+        composable(route = Halaman.Data.name) {
+            DetailMahasiswaView(
+                dataMhs = uiState,
+                modifier = Modifier,
+                onBackButton = { navHost.popBackStack() }
+            )
+        }
     }
 }
