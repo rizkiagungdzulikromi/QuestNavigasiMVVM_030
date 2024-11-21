@@ -27,4 +27,11 @@ fun NavigatorControl(
     viewModel: MahasiswaViewModel = viewModel(),
     navHost: NavHostController = rememberNavController(),
     modifier: Any
-)
+) {
+    val uiState by viewModel.dataModel.collectAsState()
+    NavHost(
+        navController = navHost,
+        startDestination = Halaman.Form.name
+    )
+    }
+}
